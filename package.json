@@ -1,0 +1,41 @@
+{
+  "name": "react-user-crud",
+  "version": "0.0.1",
+  "description": "Package to create a user crud.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@githubPD:pdsolucoes/react-user-crud.git"
+  },
+  "keywords": [
+    "react",
+    "user",
+    "cruds"
+  ],
+  "author": "PD Soluções",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "^17.0.40",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.70.1",
+    "rollup-plugin-sass": "^1.2.10",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "typescript": "^4.6.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "files": [
+    "dist"
+  ]
+}
