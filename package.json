@@ -19,7 +19,11 @@
   ],
   "author": "PD Soluções",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.5.2"
+  },
   "devDependencies": {
     "@types/react": "^17.0.40",
     "babel-core": "^6.26.3",
