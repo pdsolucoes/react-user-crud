@@ -77,7 +77,7 @@ const ForgotPassword: React.FC = () => {
 
                         <Stack 
                         sx={{
-                            marginTop: "10px"
+                            marginTop: "5vh"
                         }}
                         spacing={2} 
                         direction="row">
@@ -88,7 +88,9 @@ const ForgotPassword: React.FC = () => {
                             </Button>
                     
                             <Button variant="contained" style= {{
-                                backgroundColor: "#06BEA7"
+                                backgroundColor: "#FFF",
+                                border: "1px solid #06BEA7",
+                                color: "#06BEA7"
                             }} onClick={() => console.log("cancelou")}>
                             <strong>Cancelar</strong>
                             </Button>    
