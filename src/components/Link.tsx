@@ -11,6 +11,8 @@ const Link: React.FC<ILink> =  ({url, url_message}: ILink) => {
             <a href={url}
             
                 style={{
+                    margin: "10px 0",
+                    fontSize:  "14px",
                     fontWeight: "bold",
                     textDecoration: "none"
                 }}
