@@ -87,7 +87,7 @@ const Login: React.FC = () => {
                         label={"Senha"}
                         onChange={e => setPassword(e.target.value)}/>
 
-                        <Link url_message="Esqueci minha senha" url="https://www.google.com.br"></Link>
+                        <Link url_message="Esqueci minha senha" url="/forgot"></Link>
                        
 
                         <Button variant="contained" style= {{

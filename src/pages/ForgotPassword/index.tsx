@@ -6,10 +6,15 @@ import { Stack } from "@mui/material";
 
 import {useState} from "react"
 
+import {useNavigate} from "react-router-dom"
 
 const ForgotPassword: React.FC = () => {
     const [email, setEmail] =  useState("")
+    const navigate = useNavigate()
 
+    const navigateToLogin = () => {
+        navigate("/login")
+    }   
 
 
     return (
@@ -91,7 +96,7 @@ const ForgotPassword: React.FC = () => {
                                 backgroundColor: "#FFF",
                                 border: "1px solid #06BEA7",
                                 color: "#06BEA7"
-                            }} onClick={() => console.log("cancelou")}>
+                            }} onClick={navigateToLogin}>
                             <strong>Cancelar</strong>
                             </Button>    
                         </Stack>

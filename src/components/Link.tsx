@@ -1,4 +1,5 @@
 import * as React from "react"
+import {Link as RouterLink} from "react-router-dom";
 
 interface ILink {
     url: string;
@@ -8,7 +9,7 @@ interface ILink {
 const Link: React.FC<ILink> =  ({url, url_message}: ILink) => {
     return (
         <>
-            <a href={url}
+            <RouterLink to={url}
             
                 style={{
                     margin: "10px 0",
@@ -16,7 +17,7 @@ const Link: React.FC<ILink> =  ({url, url_message}: ILink) => {
                     fontWeight: "bold",
                     textDecoration: "none"
                 }}
-            >{url_message}</a>
+            >{url_message}</RouterLink>
         </>
     )
 }
