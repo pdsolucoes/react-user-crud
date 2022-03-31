@@ -6,6 +6,7 @@ import TextField from '@mui/material/TextField';
 import {useState} from "react"
 import { Divider } from "@mui/material";
 import Link from "../../components/Link";
+import { createSession } from "../../services/Session";
 
 
 const Login: React.FC = () => {
@@ -92,7 +93,7 @@ const Login: React.FC = () => {
 
                         <Button variant="contained" style= {{
                             backgroundColor: "#06BEA7"
-                        }} onClick={() => console.log({email, password})}>
+                        }} onClick={() => createSession({email, password})}>
                            <strong>ENTRAR</strong>
                         </Button>
                 

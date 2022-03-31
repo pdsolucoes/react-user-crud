@@ -7,6 +7,7 @@ import { Stack } from "@mui/material";
 import {useState} from "react"
 
 import {useNavigate} from "react-router-dom"
+import { forgotPassword } from "../../services/Password";
 
 const ForgotPassword: React.FC = () => {
     const [email, setEmail] =  useState("")
@@ -88,7 +89,7 @@ const ForgotPassword: React.FC = () => {
                         direction="row">
                             <Button variant="contained" style= {{
                                 backgroundColor: "#06BEA7"
-                            }} onClick={() => console.log({email})}>
+                            }} onClick={() => forgotPassword(email)}>
                             <strong>Enviar código</strong>
                             </Button>
                     

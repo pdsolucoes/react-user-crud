@@ -4,19 +4,34 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { Stack } from "@mui/material";
 
-import {useNavigate} from "react-router-dom"
+import {useNavigate, useParams} from "react-router-dom"
 
 import {useState} from "react"
+import { resetPassword } from "../../services/Password";
 
 
 const ResetPassword: React.FC = () => {
     const [newPassword, setNewPassword] =  useState("");
     const [newPasswordConfirmation, setNewPasswordConfirmation] = useState("")
     const navigate = useNavigate()
+    const {id} = useParams()
 
     const navigateToLogin = () => {
         navigate("/login")
     }   
+
+
+    const handleResetPassword = async () => {
+        if(!id) {
+            return
+        }
+        
+        await resetPassword({
+            new_password: newPassword,
+            new_password_confirmation: newPasswordConfirmation,
+            token: id
+        })
+    }
 
     return (
         <Box
@@ -98,7 +113,7 @@ const ResetPassword: React.FC = () => {
                         direction="row">
                             <Button variant="contained" style= {{
                                 backgroundColor: "#06BEA7"
-                            }} onClick={() => console.log({newPassword, newPasswordConfirmation})}>
+                            }} onClick={handleResetPassword}>
                             <strong>Redefinir senha</strong>
                             </Button>
                     
