@@ -23,9 +23,11 @@
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.5.2",
+    "axios": "^0.26.1",
     "react-router-dom": "^6.2.2"
   },
   "devDependencies": {
+    "@types/node": "^17.0.23",
     "@types/react": "^17.0.40",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
