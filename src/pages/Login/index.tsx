@@ -9,7 +9,13 @@ import Link from "../../components/Link";
 import { createSession } from "../../services/Session";
 
 
-const Login: React.FC = () => {
+interface Ilogin{
+    logoUrl: string;
+    imgUrl: string;
+    projectDescription: string;
+}
+
+const Login: React.FC<Ilogin> = ({logoUrl, imgUrl, projectDescription}) => {
     const [email, setEmail] =  useState("")
     const [password, setPassword] = useState("")
 
@@ -47,7 +53,7 @@ const Login: React.FC = () => {
                             borderTopLeftRadius: "10px",
                             borderBottomLeftRadius: "10px"
                         }}
-                        src="https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027-696x464.jpg"
+                        src={imgUrl}
                         alt="presetation"></img>
                     </Box>
 
@@ -66,12 +72,12 @@ const Login: React.FC = () => {
                         <img
                          height="75px"
                          width="100%" 
-                         src="https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027-696x464.jpg"
+                         src={logoUrl}
                          alt="logo"></img>
                         <p style={{
                             textAlign: "center",
                             fontSize: "14px"
-                        }}>Teste testeto muito grander par não caber na telas, ksdfghsgvdhunc,edf,g,sdt,h,vggfh.</p>
+                        }}>{projectDescription}</p>
                         <Divider></Divider>
                         <h1 style= {{
                             color: "#06BEA7"

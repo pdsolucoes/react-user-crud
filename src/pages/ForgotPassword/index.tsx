@@ -9,7 +9,11 @@ import {useState} from "react"
 import {useNavigate} from "react-router-dom"
 import { forgotPassword } from "../../services/Password";
 
-const ForgotPassword: React.FC = () => {
+interface IForgotPassword{
+    imgUrl: string;
+}
+
+const ForgotPassword: React.FC<IForgotPassword> = ({imgUrl}) => {
     const [email, setEmail] =  useState("")
     const navigate = useNavigate()
 
@@ -51,7 +55,7 @@ const ForgotPassword: React.FC = () => {
                             borderTopLeftRadius: "10px",
                             borderBottomLeftRadius: "10px"
                         }}
-                        src="https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027-696x464.jpg"
+                        src={imgUrl}
                         alt="presetation"></img>
                     </Box>
 

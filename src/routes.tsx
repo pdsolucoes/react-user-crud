@@ -6,14 +6,21 @@ import ForgotPassword from "./pages/ForgotPassword"
 import Login from "./pages/Login"
 import ResetPassword from "./pages/ResetPassword"
 
-const Router:React.FC = () => {
+
+interface IRouter {
+    projectDescription: string;
+    imgUrl: string;
+    logoUrl: string;
+}
+
+const Router:React.FC<IRouter> = ({projectDescription, imgUrl, logoUrl}) => {
     return (
     <BrowserRouter>
         <Routes>
-            <Route path='/login' element={<Login ></Login>}></Route>
-            <Route path='/forgot' element={<ForgotPassword ></ForgotPassword>}></Route>
-            <Route path='/confirmation' element={<Confirmation ></Confirmation>}></Route>
-            <Route path='/reset/:id' element={<ResetPassword></ResetPassword>}></Route>
+            <Route path='/login' element={<Login logoUrl={logoUrl} imgUrl={imgUrl} projectDescription={projectDescription}></Login>}></Route>
+            <Route path='/forgot' element={<ForgotPassword imgUrl={imgUrl}></ForgotPassword>}></Route>
+            <Route path='/confirmation' element={<Confirmation imgUrl={imgUrl} ></Confirmation>}></Route>
+            <Route path='/reset/:id' element={<ResetPassword imgUrl={imgUrl}></ResetPassword>}></Route>
         </Routes>
     </BrowserRouter>   )
 }

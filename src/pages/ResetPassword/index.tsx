@@ -9,8 +9,11 @@ import {useNavigate, useParams} from "react-router-dom"
 import {useState} from "react"
 import { resetPassword } from "../../services/Password";
 
+interface IResetPassword{
+    imgUrl: string;
+}
 
-const ResetPassword: React.FC = () => {
+const ResetPassword: React.FC<IResetPassword> = ({imgUrl}) => {
     const [newPassword, setNewPassword] =  useState("");
     const [newPasswordConfirmation, setNewPasswordConfirmation] = useState("")
     const navigate = useNavigate()
@@ -25,7 +28,7 @@ const ResetPassword: React.FC = () => {
         if(!id) {
             return
         }
-        
+
         await resetPassword({
             new_password: newPassword,
             new_password_confirmation: newPasswordConfirmation,
@@ -66,7 +69,7 @@ const ResetPassword: React.FC = () => {
                             borderTopLeftRadius: "10px",
                             borderBottomLeftRadius: "10px"
                         }}
-                        src="https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027-696x464.jpg"
+                        src={imgUrl}
                         alt="presetation"></img>
                     </Box>
 

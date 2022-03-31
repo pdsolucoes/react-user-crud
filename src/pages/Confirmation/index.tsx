@@ -1,8 +1,11 @@
 import * as React from "react"
 import Box from '@mui/material/Box';
 
+interface IConfirmation{
+    imgUrl: string;
+}
 
-const Confirmation: React.FC = () => {
+const Confirmation: React.FC<IConfirmation> = ({imgUrl}) => {
 
 
 
@@ -39,7 +42,7 @@ const Confirmation: React.FC = () => {
                             borderTopLeftRadius: "10px",
                             borderBottomLeftRadius: "10px"
                         }}
-                        src="https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027-696x464.jpg"
+                        src={imgUrl}
                         alt="presetation"></img>
                     </Box>
 
