@@ -18,5 +18,9 @@ export default {
       sass({ insert: true }),
       typescript({ objectHashIgnoreUnknownHack: true })
     ],
-    external: ['react', 'react-dom']
+    external: [
+      'react',
+      'react-dom',
+      "redux-persist/lib/integration/react",
+      "redux-persist/lib/storage"]
   }
