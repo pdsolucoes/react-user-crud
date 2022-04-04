@@ -23,8 +23,12 @@
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.5.2",
+    "@rematch/core": "^2.2.0",
+    "@rematch/persist": "^2.1.2",
     "axios": "^0.26.1",
-    "react-router-dom": "^6.2.2"
+    "react-redux": "^7.2.7",
+    "react-router-dom": "^6.2.2",
+    "redux-persist": "^6.0.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
