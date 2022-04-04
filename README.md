@@ -19,6 +19,32 @@ Its necessary add this variables in your .env file at host project.
     APPLICATION_IDENTIFIER=YOUR_APP_IDENTIFIER
 </pre>
 
+# Usage
+You will need install react router dom to run exported router.
+
+In order to use available routes you can use this template in your App.tsx file.
+```js
+import React from 'react';
+import './App.css';
+
+import {Router} from "@pd-solucoes/react-user-crud"
+
+
+function App() {
+  return (
+    <Router 
+    imgUrl="YOUR_IMAGE_LINK"
+    logoUrl="YOUR_IMAGE_LINK"
+    projectDescription="YOUR_PROJECT_DESCRIPTION">
+
+    </Router>
+  );
+}
+
+export default App;
+
+```
+
 
 
 
