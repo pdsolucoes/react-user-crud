@@ -22,6 +22,17 @@ const ForgotPassword: React.FC<IForgotPassword> = ({imgUrl}) => {
     }   
 
 
+    const handleSubmit =async () => {
+        try {
+            await forgotPassword(email)
+            navigate("/confirmation")
+        }catch(err) {
+            console.error(err)
+        }
+
+    }
+
+
     return (
         <Box
         sx={{
@@ -93,7 +104,7 @@ const ForgotPassword: React.FC<IForgotPassword> = ({imgUrl}) => {
                         direction="row">
                             <Button variant="contained" style= {{
                                 backgroundColor: "#06BEA7"
-                            }} onClick={() => forgotPassword(email)}>
+                            }} onClick={handleSubmit}>
                             <strong>Enviar código</strong>
                             </Button>
                     
