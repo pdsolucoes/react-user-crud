@@ -6,10 +6,16 @@ interface ICreateSession {
 }
 
 async function createSession({email, password}: ICreateSession) {
-    await api.post("/session", {
+    const {data} = await api.post("/session", {
         email,
         password
     } )
+
+
+    return {
+        ...data.user,
+        token: data.token
+    }
 }
 
 

@@ -6,7 +6,9 @@ import TextField from '@mui/material/TextField';
 import {useState} from "react"
 import { Divider } from "@mui/material";
 import Link from "../../components/Link";
-import { createSession } from "../../services/Session";
+
+import { store } from '../../config/store';
+
 
 
 interface Ilogin{
@@ -18,7 +20,12 @@ interface Ilogin{
 const Login: React.FC<Ilogin> = ({logoUrl, imgUrl, projectDescription}) => {
     const [email, setEmail] =  useState("")
     const [password, setPassword] = useState("")
+    const {dispatch}  = store;
 
+    const handleSubmit = async () => {
+        await dispatch.Auth.loginAsync({email, password})
+        console.log("Deu certo login")
+    }
 
     return (
         <Box
@@ -99,7 +106,7 @@ const Login: React.FC<Ilogin> = ({logoUrl, imgUrl, projectDescription}) => {
 
                         <Button variant="contained" style= {{
                             backgroundColor: "#06BEA7"
-                        }} onClick={() => createSession({email, password})}>
+                        }} onClick={handleSubmit}>
                            <strong>ENTRAR</strong>
                         </Button>
                 
