@@ -1,5 +1,5 @@
 {
-  "name": "react-user-crud",
+  "name": "@pd-solucoes/react-user-crud",
   "version": "0.0.1",
   "description": "Package to create a user crud.",
   "main": "./dist/index.js",
