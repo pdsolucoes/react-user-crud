@@ -1161,12 +1161,11 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@^16.8.3 || ^17 || ^18", "react@^17.0.0", "react@>=16.6.0", "react@>=16.8", "react@>=16.8.0", "react@17.0.2", "react@file:../../test-project/my-app/node_modules/react":
-  "resolved" "file:../../test-project/my-app/node_modules/react"
-  "version" "17.0.2"
+"react@^16.8.3 || ^17 || ^18", "react@^17.0.0", "react@>=16.6.0", "react@>=16.8", "react@>=16.8.0", "react@17.0.2", "react@file:../../my-app/node_modules/react":
+  "resolved" "file:../../my-app/node_modules/react"
+  "version" "18.0.0"
   dependencies:
     "loose-envify" "^1.1.0"
-    "object-assign" "^4.1.1"
 
 "readdirp@~3.6.0":
   "integrity" "sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA=="
