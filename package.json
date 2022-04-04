@@ -4,6 +4,7 @@
   "description": "Package to create a user crud.",
   "main": "./dist/index.js",
   "scripts": {
+    "publish": "yarn build && npm publish",
     "build": "rollup -c",
     "start": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
